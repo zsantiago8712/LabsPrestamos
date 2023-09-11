@@ -1,0 +1,17 @@
+Casos que se pueden encontrar en el jsTree de laboratorios.uia.mx
+1.-Agregar nuevo nodo.
+	1.1) Mover el nuevo nodo.- Se cambia el parent del arreglo "Agregar". Se ubica por id.
+	1.2) Editar el nuevo nodo.- Se cambia el texto del arreglo "Agregar". Se ubica por id.
+	1.3) Borrar.- Borra el objeto del arreglo "Agregar". Se ubica por id y no deja borrar si este tiene hijos.
+2.- Editar un nodo que este en la Base de Datos. Se reconoce por su id (#).
+	2.1) Cambiar su nombre.- Se cambia el texto y este se agrega al arreglo "Editar".
+	2.2) Cambiar parent.- Se agrega en el arreglo Editar y se cambia el parent. En caso de ser un parent (js1_#) un atributo llamado "parent_nuevo : 1". 
+	     Esto para saber que su parent es un nodo nuevo para el php. 
+	2.3) Borrar nodo de Base de Datos. Se restringue que se puede borrar un nodo si este tiene items o hijos. Se guarda en el arreglo "Editar" como un objeto con 
+             su id y un atributo llamado "borrar".
+3.- No permitir que un item se pueda borrar o mover. 
+4.- No permitir que una clasificacion se pueda mover a otra clasificación.v Para lograrlo podemos establecer un condicionante que no deje mover un nodo si su padre 
+    es "Ibero Inventarios".
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Notas:
+No dejar que se repitan datos en los arreglos Editar y Agregar. 

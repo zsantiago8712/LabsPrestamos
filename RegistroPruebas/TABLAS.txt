@@ -1,0 +1,11 @@
+DELETE FROM inventarios_deii.inventario_serie_lote;
+DELETE From inventarios_deii.inventario_existencia_laboratorio;
+DELETE FROM inventarios_deii.inventario_caracteristica_item;
+DELETE FROM inventarios_deii.modelo;
+DELETE FROM inventarios_deii.marca;
+DELETE FROM inventarios_deii.inventario_item;
+modelo = 'SIN MODELO'
+ALTER TABLE inventarios_deii.inventario_item add column id_prefijo int default null
+ALTER TABLE inventarios_deii.inventario_item add column id_unidad int default null
+CREATE TABLE inventario_unidad(id_unidad int not null auto_increment Primary key, unidad varchar(25) not null)
+
